@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NotifViewController: BaseViewController, UITableViewDataSource{
+class NotifViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate{
     
     var tableView: UITableView!
     var dataImage: Array<String> = ["ef", "ef","ef", "ef","ef", "ef","ef", "ef","ef", "ef"]
@@ -29,12 +29,22 @@ class NotifViewController: BaseViewController, UITableViewDataSource{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("-----> CLICK.")
+        pop()
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+    
     private func initView(){
         tableView = UITableView(frame: self.view.frame, style: .plain)
         tableView.register(MyCell.self, forCellReuseIdentifier: "MY_CELL")
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableView.automaticDimension
         tableView.dataSource = self
+        tableView.delegate = self
         self.view.addSubview(tableView)
     }
     
@@ -45,6 +55,17 @@ class NotifViewController: BaseViewController, UITableViewDataSource{
         // Do any additional setup after loading the view.
         
         initView()
+    }
+    
+    @objc func pop(){
+        let popVC = PopViewController()
+        popVC.modalPresentationStyle = .popover
+        popVC.popoverPresentationController?.delegate = self
+        popVC.popoverPresentationController?.sourceView = tableView
+        popVC.popoverPresentationController?.sourceRect = tableView.bounds
+        popVC.preferredContentSize = CGSize(width: 100,height: 100)
+        popVC.popoverPresentationController?.permittedArrowDirections = .down
+        self.present(popVC, animated: true, completion: nil)
     }
     
 }

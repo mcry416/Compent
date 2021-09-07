@@ -12,7 +12,7 @@ import NotificationBannerSwift
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    var dataArray: Array<String> = ["Simple Useage Default","Simple Usage Wanning","Bottom Show","Plain Show","Side View", "Danger Side View", "on Tap", "on Swip Up", "Heavy Touch", "Select a picture", "KVO", "Notification"]
+    var dataArray: Array<String> = ["Simple Useage Default","Simple Usage Wanning","Bottom Show","Plain Show","Side View", "Danger Side View", "on Tap", "on Swip Up", "Heavy Touch", "Select a picture", "KVO", "Notification", "Design Pattern", "Pop", "GCD", "Slide", "KEYBOARD", "Paint", "Animation"]
     var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,6 +84,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let vc = NotifViewController()
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
+        case 12:
+            let vc = DesignPatternViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 13:
+            let vc = PopBaseViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 14:
+            let vc = GCDViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 15:
+            let vc = SlideViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 16:
+            let vc = KeyBoardViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 17:
+            let vc = PaintViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 18:
+            let vc = AnimationViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
         default:
             break
         }
@@ -111,16 +139,45 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         initConfig()
         
-        sendNotice()
+    //    sendNotice()
     }
     
     private func sendNotice() {
         let content = UNMutableNotificationContent()
-        content.title = "Compent"
-        content.subtitle = "Nice! I'll got it for u."
-        content.body = "Nancy.Losie"
+        content.title = "Apple Music"
+        content.subtitle = "<<Lover>>"
+        content.body = "Taylor Swift all new album to explore."
         content.sound = .defaultCritical
-        content.launchImageName = "taylor"
+       
+        
+        if let imageURL = Bundle.main.url(forResource: "taylor", withExtension: "jpeg"),
+            let attachment = try? UNNotificationAttachment(identifier: "imageAttachment",
+                                                           url: imageURL, options: nil) {
+            content.attachments = [attachment]
+        }
+ 
+        
+        
+        /*
+        let testPath = Bundle.main.path(forResource: "taylor", ofType: "jpeg")
+        print("------> url:\(testPath)")
+        
+        if let path = Bundle.main.path(forResource: "taylor", ofType: "jpeg") {
+            let url = URL(fileURLWithPath: path)
+            
+
+            print("------> 1.")
+            
+            do {
+                let attachment = try UNNotificationAttachment(identifier: "DontForget", url: url, options: nil)
+                content.attachments = [attachment]
+                
+                print("------> 2.")
+            } catch {
+                print("The attachment was not loaded.")
+            }
+        }
+ */
          
         //设置通知触发器
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
