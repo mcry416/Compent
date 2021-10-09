@@ -20,8 +20,9 @@ class BaseViewController: UIViewController {
     
     private func simulateCheckStatus(){
         NSLog("LAUNCH...")
+        print("------> \(self)")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

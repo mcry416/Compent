@@ -12,7 +12,7 @@ import NotificationBannerSwift
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    var dataArray: Array<String> = ["Simple Useage Default","Simple Usage Wanning","Bottom Show","Plain Show","Side View", "Danger Side View", "on Tap", "on Swip Up", "Heavy Touch", "Select a picture", "KVO", "Notification", "Design Pattern", "Pop", "GCD", "Slide", "KEYBOARD", "Paint", "Animation"]
+    var dataArray: Array<String> = ["Simple Useage Default","Simple Usage Wanning","Bottom Show","Plain Show","Side View", "Danger Side View", "on Tap", "on Swip Up", "Heavy Touch", "Select a picture", "KVO", "Notification", "Design Pattern", "Pop", "GCD", "Slide", "KEYBOARD", "Paint", "Animation", "FlowLayout", "Html", "Exam", "Clourse", "Full Screen", "Raw URLSession", "Voice", "Image Capture", "PageVC"]
     var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -110,6 +110,42 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.present(vc, animated: true, completion: nil)
         case 18:
             let vc = AnimationViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 19:
+            let vc = FlowViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 20:
+            let vc = HtmlViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 21:
+            let vc = ExamViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 22:
+            let vc = ClourseViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 23:
+            let vc = SpinViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 24:
+            let vc = RawURLViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 25:
+            let vc = VoiceViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 26:
+            let vc = ImgCaptureViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 27:
+            let vc = PageViewController()
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
         default:
