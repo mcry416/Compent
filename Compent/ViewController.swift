@@ -12,7 +12,7 @@ import NotificationBannerSwift
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    var dataArray: Array<String> = ["Simple Useage Default","Simple Usage Wanning","Bottom Show","Plain Show","Side View", "Danger Side View", "on Tap", "on Swip Up", "Heavy Touch", "Select a picture", "KVO", "Notification", "Design Pattern", "Pop", "GCD", "Slide", "KEYBOARD", "Paint", "Animation", "FlowLayout", "Html", "Exam", "Clourse", "Full Screen", "Raw URLSession", "Voice", "Image Capture", "PageVC"]
+    var dataArray: Array<String> = ["Simple Useage Default","Simple Usage Wanning","Bottom Show","Plain Show","Side View", "Danger Side View", "on Tap", "on Swip Up", "Heavy Touch", "Select a picture", "KVO", "Notification", "Design Pattern", "Pop", "GCD", "Slide", "KEYBOARD", "Paint", "Animation", "FlowLayout", "Html", "Exam", "Clourse", "Full Screen", "Raw URLSession", "Voice", "Image Capture", "PageVC", "National","Page Scroll", "Medical", "Inner Settings"]
     var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -146,6 +146,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.present(vc, animated: true, completion: nil)
         case 27:
             let vc = PageViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 28:
+            let vc = NationalViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 29:
+            let vc = PageScrollViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 30:
+            let vc = TabBarViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        case 31:
+            let vc = InnerSettingViewController()
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
         default:

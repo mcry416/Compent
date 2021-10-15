@@ -7,19 +7,34 @@
 
 import UIKit
 
-class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
+class PageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     var vcArray: Array<UIViewController> = [PageOneViewController(),
                                             PageTwoViewController()]
-
+    var pageTitle: Array<String> = ["One", "Two"]
+    var pageControl: UIPageControl!
+    
+    private func initView(){
+        pageControl = UIPageControl(frame: CGRect(x: 200, y: 200, width: 30, height: 25))
+        pageControl.numberOfPages = 2
+        pageControl.backgroundColor = .brown
+        self.view.bringSubviewToFront(pageControl)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.dataSource = self
+        self.delegate = self
         
         let defaultVC = vcArray[0]
         self.setViewControllers([defaultVC], direction: .forward, animated: true, completion: nil)
+        
+        self.transitionStyle
+        
+  //      initView()
+        
     }
     
     // MARK: - Delegate.

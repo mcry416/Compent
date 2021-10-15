@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Compent
+
+  Created by Eldest's MacBook on 2021/10/11.
+  
+*/
+
+localisable.strings (german)
+"LOGIN" = "Danke";
+"REGISTER" = "Ichlibe";
+

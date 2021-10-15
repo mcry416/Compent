@@ -18,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        /*
+        self.window?.backgroundColor = UIColor.white
+        let rootVC = TabBarViewController();
+        self.window?.rootViewController = UINavigationController(rootViewController: rootVC)
+        self.window?.rootViewController?.navigationItem.titleView?.isHidden = true
+*/
+        
         UNUserNotificationCenter.current()
             .requestAuthorization(options: [.alert, .sound, .badge]) {
                 (accepted, error) in

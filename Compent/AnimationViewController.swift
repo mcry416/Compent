@@ -12,6 +12,7 @@ class AnimationViewController: BaseViewController {
     
     private var animationView: UIView!
     private var buttonChange:  UIButton!
+    private var imageView: UIImageView!
     
     private func initView(){
         animationView = UIView()
@@ -34,6 +35,12 @@ class AnimationViewController: BaseViewController {
             make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-80)
             make.centerX.equalToSuperview()
         }
+        
+        imageView = UIImageView(frame: CGRect(x: (self.view.frame.width / 2) - 25, y: 44, width: 50, height: 50))
+        
+        // MARK: -- Bundle resource.
+        imageView.image = UIImage(named: "PicCenter.bundle/Contents/Resources/ef.png")
+        self.view.addSubview(imageView)
     }
 
     override func viewDidLoad() {

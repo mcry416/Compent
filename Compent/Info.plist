@@ -5,7 +5,10 @@
 	<key>App Transport Security</key>
 	<string></string>
 	<key>NSAppTransportSecurity</key>
-	<dict/>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>NSCameraUsageDescription</key>
