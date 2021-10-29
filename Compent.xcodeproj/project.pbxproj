@@ -56,6 +56,7 @@
 		0452EB7A26861CC700963CA8 /* Business1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452EB7926861CC700963CA8 /* Business1ViewController.swift */; };
 		0452EB7F26861CD900963CA8 /* Business2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452EB7E26861CD900963CA8 /* Business2ViewController.swift */; };
 		045F9646271905AA001D5660 /* VIDEO_1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 045F9645271905AA001D5660 /* VIDEO_1.mp4 */; };
+		045F9650271976DD001D5660 /* MoveButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F964F271976DD001D5660 /* MoveButtonViewController.swift */; };
 		046B1CA826F0D45B0085C0E9 /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B1CA726F0D45B0085C0E9 /* FlowViewController.swift */; };
 		046B1CAE26F0D51B0085C0E9 /* FlowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B1CAD26F0D51B0085C0E9 /* FlowCell.swift */; };
 		046E316526A07FB8009B6289 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E316426A07FB8009B6289 /* NewViewController.swift */; };
@@ -200,6 +201,7 @@
 		0452EB7926861CC700963CA8 /* Business1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business1ViewController.swift; sourceTree = "<group>"; };
 		0452EB7E26861CD900963CA8 /* Business2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business2ViewController.swift; sourceTree = "<group>"; };
 		045F9645271905AA001D5660 /* VIDEO_1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = VIDEO_1.mp4; sourceTree = "<group>"; };
+		045F964F271976DD001D5660 /* MoveButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveButtonViewController.swift; sourceTree = "<group>"; };
 		046B1CA726F0D45B0085C0E9 /* FlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowViewController.swift; sourceTree = "<group>"; };
 		046B1CAD26F0D51B0085C0E9 /* FlowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCell.swift; sourceTree = "<group>"; };
 		046E316426A07FB8009B6289 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 				0418DF5C27153D9500AD9281 /* PageScrollViewController.swift */,
 				0418DF6227155BB200AD9281 /* SubPageViewController.swift */,
 				0424BB0B27180B0B00CA5A08 /* InnerSettingViewController.swift */,
+				045F964F271976DD001D5660 /* MoveButtonViewController.swift */,
 			);
 			path = Compent;
 			sourceTree = "<group>";
@@ -909,6 +912,7 @@
 				0452EB6526861A3F00963CA8 /* BaseView.swift in Sources */,
 				04DBB03F268D5CBF002FC47C /* GCDWebServerStreamedResponse.m in Sources */,
 				0435545626D8E0C4003A2FC7 /* PaintView.swift in Sources */,
+				045F9650271976DD001D5660 /* MoveButtonViewController.swift in Sources */,
 				04ED428E27166AEF00E2837C /* VideoViewController.swift in Sources */,
 				043255F8268809BF00664091 /* KVOViewController.swift in Sources */,
 				04396ED5268568730093D869 /* AppDelegate.swift in Sources */,

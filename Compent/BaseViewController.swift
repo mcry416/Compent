@@ -39,3 +39,18 @@ class BaseViewController: UIViewController {
     }
 
 }
+
+
+extension BaseViewController{
+    
+    func isEven(number: Int) -> Bool{
+        if (number % 2) == 0 {
+            return true
+        }
+        if (number % 2) != 0 {
+            return false
+        } else {
+            return false
+        }
+    }
+}
